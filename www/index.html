@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Point Tracking System Based on Points Equation</title>
+	<meta name="description" content="Point tracking system based on points equation.">
+	<link href="css/global.css" type="text/css" rel="stylesheet" media="all">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/source-sans-pro.js"></script>
+	<script type="text/javascript" src="js/objects.js"></script>
+	<script type="text/javascript" src="js/database.js"></script>
+	<script type="text/javascript" src="js/draw.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<script type="text/javascript">
+	function doSomething() {
+		var vendor = createVendor();
+		vendor.name = "Test Vendor";
+		app.store.insertVendor(vendor);
+		
+		var food = createFoodItem();
+		food.vendorID = 1;
+		food.siteID = -1;
+		food.name = "Test Food";
+		food.calories = 100;
+		food.fatCalories = 20;
+		food.fat = 2;
+		food.satFat = 1;
+		food.protein = 2;
+		app.store.insertFoodItem(food);
+		
+		//var equation = createEquation(-1, "Y", String("round((cal + (4 * sugar) + (9 * satFat) - (3.2 * protein))/33))"));
+		//app.store.insertEquation(equation);
+		
+		app.store.findVendorByExactName("Test Vendor", function(vendor) {
+			console.log(vendor);
+		});
+		app.store.findFoodByName("Test", function(food) {
+			console.log(food);
+		});
+		app.store.getEquations(function(equations) {
+			console.log(equations);
+		});
+	}
+	</script>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="#" onclick="drawFoodEntry(); return false;" id="foodLink"><img src="img/fork_knife.svg" alt="Food" /></a>
+			<a href="#" onclick="return false;" id="fitnessLink"><img src="img/cardio_heart.svg" alt="Fitness" /></a>
+			<a href="#" onclick="return false;" id="weightLink"><img src="img/scale.svg" alt="Weight" /></a>
+			<a href="#" onclick="drawOptions(); return false;" id="optionsLink"><img src="img/wrench_screwdriver.png" alt="Options" /></a>
+		</nav>
+		<h1><a href="#" onclick="initApp(); return false;">Points Tracker</a></h1>
+		<div class="clear"></div>
+	</header>
+	<div class="alert">
+		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+		<span class="message">There was an error with something somewhere. (I forgot to add a message!)</span>
+	</div>
+	<div class="main">
+		<button onclick="doSomething(); return false;">Do Something!</button>
+	</div>
+</body>
+</html>

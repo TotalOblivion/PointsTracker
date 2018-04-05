@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: source-sans-pro, serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+	background: #2F3238;
+	color: #98a0ad/*#7F8289*/;
+}
+
+h1, h2, h3, h4 {
+	color:#FFFFFF;
+	font-weight:300;
+}
+
+h1{
+	font-size:24px;
+}
+
+h2{
+	font-size:20px;
+}
+
+h3{
+	font-size:18px;
+}
+
+h4{
+	font-size:14px;
+}
+
+header {
+	background: #26292E;
+	padding: 10px 20px;
+	border-bottom: 1px solid #111111;
+}
+
+header nav {
+	float: right;
+}
+
+header nav img {
+	margin-left:14px;
+	height:30px;
+}
+
+.content {
+	padding: 0 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+#foodLink, #fitnessLink, #weightLink {
+	display:none;
+}
+
+ul {
+	list-style:none;
+}
+
+button {
+	border-radius: 2px;
+	background: #7F8289;
+	padding: 6px;
+	border: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: 
+}
+
+button:hover {
+	background: #DE5E60;
+}
+
+a {
+	color: #CCCCCC;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    margin: 15px;
+	display: none;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.green {
+	color: #4CAF50;
+}
+.red {
+	color: #f44336;
+}
+.white {
+	color: #ffffff;
+}
+
+h2.dateFormat {
+	padding:5px 0;
+	text-align: center;
+}
+
+#equations li {
+	margin:10px 0;
+}
+#addFood li {
+	margin:8px 0;
+	display:none;
+}
+#addFood li.show {
+	display:block;
+}
+#addFood span {
+	text-align: right;
+	display: inline-block;
+	width: 100px;
+}
+#addFood input {
+	width: 100px;
+}

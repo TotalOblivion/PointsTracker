@@ -1,0 +1,22 @@
+<div class="content">
+	<h2>Add Existing Entry</h2>
+	<select id="foodDropdown"><option value="">Loading Entries...</option></select> <input type="text" id="searchFood" onclick="searchFood(this)" />
+	<br />
+	<br />
+	<h2>Add Food Entry</h2>
+	<ul id="addFood" style="margin-bottom:10px">
+	<li class="show"><span class="white">Category:</span> <select id="foodCategory"><option value="">Loading...</option></select> <a href="#" onclick="drawCategoryEntry(); return false;">[Add Category]</a></li>
+		<li id="calLI"><span class="white">Calories:</span> <input type="text" id="cal" placeholder=" Calories" /></li>
+		<li id="fatCalLI"><span class="white">Fat Calories:</span> <input type="text" id="fatCal" placeholder=" Fat Calories" /></li>
+		<li id="fatLI"><span class="white">Fat(g):</span> <input type="text" id="fat" placeholder=" Fat(g)" /></li>
+		<li id="satFatLI"><span class="white">Saturated Fat(g):</span> <input type="text" id="satFat" placeholder=" Sat. Fat(g)" /></li>
+		<li id="transFatLI"><span class="white">Trans Fat(g):</span> <input type="text" id="transFat" placeholder=" Trans Fat(g)" /></li>
+		<li id="cholLI"><span class="white">Cholesterol(mg):</span> <input type="text" id="chol" placeholder=" Cholesterol(mg)" /></li>
+		<li id="sodiumLI"><span class="white">Sodium(mg):</span> <input type="text" id="sodium" placeholder=" Sodium(mg)" /></li>
+		<li id="carbLI"><span class="white">Carbohydrates(g):</span> <input type="text" id="carb" placeholder=" Carbs(g)" /></li>
+		<li id="fiberLI"><span class="white">Fiber(g):</span> <input type="text" id="fiber" placeholder=" Fiber(g)" /></li>
+		<li id="sugarLI"><span class="white">Sugar(g):</span> <input type="text" id="sugar" placeholder=" Sugar(g)" /></li>
+		<li id="proteinLI"><span class="white">Protein(g):</span> <input type="text" id="protein" placeholder=" Protein(g)" /></li>
+		<li class="show"><span class="white"></span> <button onclick="addFoodEntry(); return false;" style="margin-top:10px">Add Food Entry</button></li>
+	</ul>
+</div>
